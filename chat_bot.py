@@ -27,7 +27,7 @@ def add_contact(args: list[str, str], contacts: dict):
         return "Please use format: add [user] [phone]"
     name, phone = args
     name = name.capitalize()
-    if (contacts.get(name)):
+    if contacts.get(name):
         return f"Contact '{name}' with '{contacts.get(name)}' phone number is already exist."
     else:
         contacts[name] = phone
@@ -63,7 +63,7 @@ def show_all(contacts: dict):
 
 def main():
     """
-    Assistanse bot takes a commmand from user input and executes available commands.
+    Assistant bot takes a command from user input and executes available commands.
 
     It can add, change, show desired or all added phone contacts
 
